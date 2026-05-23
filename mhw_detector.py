@@ -24,6 +24,27 @@ import requests
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+
+def _require_col(cols: list, name: str) -> int:
+    """Return the index of *name* in *cols*, raising a descriptive error when absent."""
+    try:
+        return cols.index(name)
+    except ValueError:
+        raise RuntimeError(
+            f"Expected column '{name}' not found in API response. "
+            f"Available columns: {cols}"
+        )
+
+
+def _extract_table(payload: dict, context: str) -> tuple[list, list]:
+    """Return (columnNames, rows) from an ERDDAP JSON payload, raising on bad structure."""
+    if "table" not in payload:
+        raise RuntimeError(f"ERDDAP response missing 'table' key ({context})")
+    table = payload["table"]
+    if "columnNames" not in table or "rows" not in table:
+        raise RuntimeError(f"ERDDAP table missing 'columnNames' or 'rows' ({context})")
+    return table["columnNames"], table["rows"]
+
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
@@ -62,17 +83,16 @@ def fetch_threshold(site: dict, doy: int) -> tuple[float, float, float]:
         f"[({lat - r}):1:({lat + r})]"
         f"[({lon - r}):1:({lon + r})]"
     )
-    resp = requests.get(url, timeout=60)
+    resp = requests.get(url, timeout=60, verify=True)
     resp.raise_for_status()
-    table = resp.json()["table"]
-    cols   = table["columnNames"]
-    lat_i  = cols.index("latitude")
-    lon_i  = cols.index("longitude")
-    mean_i = cols.index("mean_sst")
-    std_i  = cols.index("standard_deviation")
+    cols, rows = _extract_table(resp.json(), f"climatology for {site['site_id']} DOY {doy}")
+    lat_i  = _require_col(cols, "latitude")
+    lon_i  = _require_col(cols, "longitude")
+    mean_i = _require_col(cols, "mean_sst")
+    std_i  = _require_col(cols, "standard_deviation")
 
     best, best_dist = None, float("inf")
-    for row in table["rows"]:
+    for row in rows:
         if row[mean_i] is None or row[std_i] is None:
             continue
         dist = ((row[lat_i] - lat) ** 2 + (row[lon_i] - lon) ** 2) ** 0.5
@@ -112,7 +132,10 @@ def current_streak(series: list[tuple[str, float]], threshold: float) -> int:
     streak = 0
     prev_date = None
     for date_str, sst in reversed(sorted_series):
-        curr = parse_date(date_str)
+        try:
+            curr = parse_date(date_str)
+        except ValueError:
+            break  # malformed date from API response breaks the streak
         if prev_date is not None and (prev_date - curr).days > 1:
             break            # non-consecutive calendar days → streak broken
         if sst > threshold:
