@@ -1,0 +1,602 @@
+[
+  {
+    "site_id": "shelburne",
+    "date": "2026-04-24",
+    "sst": 24.7
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-04-25",
+    "sst": 23.6
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-04-26",
+    "sst": 24.1
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-04-27",
+    "sst": 24.7
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-04-28",
+    "sst": 25.2
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-04-29",
+    "sst": 24.3
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-04-30",
+    "sst": 24.3
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-01",
+    "sst": 25
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-02",
+    "sst": 24.7
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-03",
+    "sst": 25.6
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-04",
+    "sst": 25.3
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-05",
+    "sst": 24.4
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-06",
+    "sst": 25.3
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-07",
+    "sst": 24.6
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-08",
+    "sst": 25.4
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-09",
+    "sst": 25.4
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-10",
+    "sst": 26.1
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-11",
+    "sst": 25.2
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-12",
+    "sst": 26
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-13",
+    "sst": 25.9
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-14",
+    "sst": 26.3
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-15",
+    "sst": 25.4
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-16",
+    "sst": 26.5
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-17",
+    "sst": 26
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-18",
+    "sst": 26.1
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-19",
+    "sst": 26.5
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-20",
+    "sst": 26
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-21",
+    "sst": 26.8
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-22",
+    "sst": 27
+  },
+  {
+    "site_id": "shelburne",
+    "date": "2026-05-23",
+    "sst": 26.8
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-04-24",
+    "sst": 23.2
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-04-25",
+    "sst": 23.4
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-04-26",
+    "sst": 24.5
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-04-27",
+    "sst": 24
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-04-28",
+    "sst": 23.5
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-04-29",
+    "sst": 23.6
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-04-30",
+    "sst": 24.5
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-01",
+    "sst": 23.7
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-02",
+    "sst": 23.7
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-03",
+    "sst": 23.9
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-04",
+    "sst": 24.5
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-05",
+    "sst": 25
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-06",
+    "sst": 24.5
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-07",
+    "sst": 24.7
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-08",
+    "sst": 24.9
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-09",
+    "sst": 25.3
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-10",
+    "sst": 25.5
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-11",
+    "sst": 24.6
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-12",
+    "sst": 25.3
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-13",
+    "sst": 25.6
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-14",
+    "sst": 24.9
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-15",
+    "sst": 25.5
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-16",
+    "sst": 25.6
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-17",
+    "sst": 25.1
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-18",
+    "sst": 25.7
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-19",
+    "sst": 25.1
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-20",
+    "sst": 26.2
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-21",
+    "sst": 25.4
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-22",
+    "sst": 25.8
+  },
+  {
+    "site_id": "digby",
+    "date": "2026-05-23",
+    "sst": 25.8
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-04-24",
+    "sst": 23.2
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-04-25",
+    "sst": 22.4
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-04-26",
+    "sst": 22.8
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-04-27",
+    "sst": 23.7
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-04-28",
+    "sst": 23.9
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-04-29",
+    "sst": 22.8
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-04-30",
+    "sst": 23.5
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-01",
+    "sst": 24.2
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-02",
+    "sst": 23.9
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-03",
+    "sst": 23.4
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-04",
+    "sst": 23.6
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-05",
+    "sst": 23.6
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-06",
+    "sst": 24.4
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-07",
+    "sst": 24.2
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-08",
+    "sst": 23.9
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-09",
+    "sst": 23.7
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-10",
+    "sst": 24.6
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-11",
+    "sst": 23.9
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-12",
+    "sst": 24.7
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-13",
+    "sst": 23.8
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-14",
+    "sst": 25.1
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-15",
+    "sst": 24
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-16",
+    "sst": 24.7
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-17",
+    "sst": 24.2
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-18",
+    "sst": 24.9
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-19",
+    "sst": 25
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-20",
+    "sst": 24.3
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-21",
+    "sst": 24.6
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-22",
+    "sst": 25.4
+  },
+  {
+    "site_id": "cape_breton",
+    "date": "2026-05-23",
+    "sst": 25.6
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-04-24",
+    "sst": 23.3
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-04-25",
+    "sst": 23.6
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-04-26",
+    "sst": 22.9
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-04-27",
+    "sst": 23.4
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-04-28",
+    "sst": 23.8
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-04-29",
+    "sst": 23.2
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-04-30",
+    "sst": 22.9
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-01",
+    "sst": 23.4
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-02",
+    "sst": 23.9
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-03",
+    "sst": 23.4
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-04",
+    "sst": 23.3
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-05",
+    "sst": 23.4
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-06",
+    "sst": 24.1
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-07",
+    "sst": 24
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-08",
+    "sst": 24.4
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-09",
+    "sst": 24.5
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-10",
+    "sst": 24.9
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-11",
+    "sst": 25
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-12",
+    "sst": 25.2
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-13",
+    "sst": 24.1
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-14",
+    "sst": 24.5
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-15",
+    "sst": 25.3
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-16",
+    "sst": 24.4
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-17",
+    "sst": 24.7
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-18",
+    "sst": 24.3
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-19",
+    "sst": 25.1
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-20",
+    "sst": 24.7
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-21",
+    "sst": 24.9
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-22",
+    "sst": 25.6
+  },
+  {
+    "site_id": "mahone",
+    "date": "2026-05-23",
+    "sst": 24.9
+  }
+]

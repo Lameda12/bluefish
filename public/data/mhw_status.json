@@ -1,0 +1,6 @@
+[
+  {"site_id": "shelburne",  "active": true, "category": 4, "days_duration": 15, "current_sst": 26.2, "threshold": 22.5},
+  {"site_id": "digby",      "active": true, "category": 4, "days_duration": 12, "current_sst": 25.7, "threshold": 22.5},
+  {"site_id": "cape_breton","active": true, "category": 4, "days_duration":  9, "current_sst": 24.9, "threshold": 22.5},
+  {"site_id": "mahone",     "active": true, "category": 3, "days_duration":  8, "current_sst": 25.1, "threshold": 22.5}
+]

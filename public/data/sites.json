@@ -1,0 +1,50 @@
+[
+  {
+    "site_id": "shelburne",
+    "name": "Shelburne County",
+    "lat": 43.8, "lon": -65.3,
+    "mhw_category": 4,
+    "current_sst": 26.2,
+    "species_risk": [
+      {"species": "Atlantic Salmon", "risk_level": "Critical", "threshold": 23.0, "delta": 3.2},
+      {"species": "Eastern Oyster",  "risk_level": "Elevated", "threshold": 30.0, "delta": -3.8},
+      {"species": "Blue Mussel",     "risk_level": "Critical", "threshold": 25.0, "delta": 1.2}
+    ]
+  },
+  {
+    "site_id": "digby",
+    "name": "Digby Neck",
+    "lat": 44.5, "lon": -65.8,
+    "mhw_category": 4,
+    "current_sst": 25.7,
+    "species_risk": [
+      {"species": "Atlantic Salmon", "risk_level": "Critical", "threshold": 23.0, "delta": 2.7},
+      {"species": "Eastern Oyster",  "risk_level": "Low",      "threshold": 30.0, "delta": -4.3},
+      {"species": "Blue Mussel",     "risk_level": "Elevated", "threshold": 25.0, "delta": 0.7}
+    ]
+  },
+  {
+    "site_id": "cape_breton",
+    "name": "Cape Breton",
+    "lat": 45.9, "lon": -60.3,
+    "mhw_category": 4,
+    "current_sst": 24.9,
+    "species_risk": [
+      {"species": "Atlantic Salmon", "risk_level": "Critical", "threshold": 23.0, "delta": 1.9},
+      {"species": "Eastern Oyster",  "risk_level": "Low",      "threshold": 30.0, "delta": -5.1},
+      {"species": "Blue Mussel",     "risk_level": "Low",      "threshold": 25.0, "delta": -0.1}
+    ]
+  },
+  {
+    "site_id": "mahone",
+    "name": "Mahone Bay",
+    "lat": 44.5, "lon": -64.4,
+    "mhw_category": 3,
+    "current_sst": 25.1,
+    "species_risk": [
+      {"species": "Atlantic Salmon", "risk_level": "Critical", "threshold": 23.0, "delta": 2.1},
+      {"species": "Eastern Oyster",  "risk_level": "Low",      "threshold": 30.0, "delta": -4.9},
+      {"species": "Blue Mussel",     "risk_level": "Elevated", "threshold": 25.0, "delta": 0.1}
+    ]
+  }
+]
