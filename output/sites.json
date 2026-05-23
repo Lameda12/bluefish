@@ -1,0 +1,114 @@
+[
+  {
+    "site_id": "shelburne",
+    "name": "Shelburne",
+    "lat": 43.8,
+    "lon": -65.3,
+    "mhw_category": 1,
+    "current_sst": 7.85,
+    "species_risk": [
+      {
+        "species": "Atlantic Salmon",
+        "risk_level": "Low",
+        "threshold": 23.0,
+        "delta": -15.15
+      },
+      {
+        "species": "Eastern Oyster",
+        "risk_level": "Low",
+        "threshold": 30.0,
+        "delta": -22.15
+      },
+      {
+        "species": "Blue Mussel",
+        "risk_level": "Low",
+        "threshold": 25.0,
+        "delta": -17.15
+      }
+    ]
+  },
+  {
+    "site_id": "digby",
+    "name": "Digby",
+    "lat": 44.5,
+    "lon": -65.8,
+    "mhw_category": null,
+    "current_sst": 8.55,
+    "species_risk": [
+      {
+        "species": "Atlantic Salmon",
+        "risk_level": "Low",
+        "threshold": 23.0,
+        "delta": -14.45
+      },
+      {
+        "species": "Eastern Oyster",
+        "risk_level": "Low",
+        "threshold": 30.0,
+        "delta": -21.45
+      },
+      {
+        "species": "Blue Mussel",
+        "risk_level": "Low",
+        "threshold": 25.0,
+        "delta": -16.45
+      }
+    ]
+  },
+  {
+    "site_id": "cape_breton",
+    "name": "Cape Breton",
+    "lat": 45.9,
+    "lon": -60.3,
+    "mhw_category": 2,
+    "current_sst": 7.68,
+    "species_risk": [
+      {
+        "species": "Atlantic Salmon",
+        "risk_level": "Low",
+        "threshold": 23.0,
+        "delta": -15.32
+      },
+      {
+        "species": "Eastern Oyster",
+        "risk_level": "Low",
+        "threshold": 30.0,
+        "delta": -22.32
+      },
+      {
+        "species": "Blue Mussel",
+        "risk_level": "Low",
+        "threshold": 25.0,
+        "delta": -17.32
+      }
+    ]
+  },
+  {
+    "site_id": "mahone_bay",
+    "name": "Mahone Bay",
+    "lat": 44.5,
+    "lon": -64.4,
+    "mhw_category": 2,
+    "current_sst": 9.83,
+    "species_risk": [
+      {
+        "species": "Atlantic Salmon",
+        "risk_level": "Low",
+        "threshold": 23.0,
+        "delta": -13.17
+      },
+      {
+        "species": "Eastern Oyster",
+        "risk_level": "Low",
+        "threshold": 30.0,
+        "delta": -20.17
+      },
+      {
+        "species": "Blue Mussel",
+        "risk_level": "Low",
+        "threshold": 25.0,
+        "delta": -15.17
+      }
+    ]
+  }
+]

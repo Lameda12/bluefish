@@ -1,0 +1,162 @@
+[
+  {
+    "site_id": "shelburne",
+    "forecast": [
+      {
+        "date": "2026-05-22",
+        "projected_sst": 8.8029,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-23",
+        "projected_sst": 9.025,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-24",
+        "projected_sst": 9.2471,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-25",
+        "projected_sst": 9.4693,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-26",
+        "projected_sst": 9.6914,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-27",
+        "projected_sst": 9.9136,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-28",
+        "projected_sst": 10.1357,
+        "above_threshold": true
+      }
+    ]
+  },
+  {
+    "site_id": "digby",
+    "forecast": [
+      {
+        "date": "2026-05-22",
+        "projected_sst": 8.4043,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-23",
+        "projected_sst": 8.5054,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-24",
+        "projected_sst": 8.6064,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-25",
+        "projected_sst": 8.7075,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-26",
+        "projected_sst": 8.8086,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-27",
+        "projected_sst": 8.9096,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-28",
+        "projected_sst": 9.0107,
+        "above_threshold": true
+      }
+    ]
+  },
+  {
+    "site_id": "cape_breton",
+    "forecast": [
+      {
+        "date": "2026-05-22",
+        "projected_sst": 7.9757,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-23",
+        "projected_sst": 8.2639,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-24",
+        "projected_sst": 8.5521,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-25",
+        "projected_sst": 8.8404,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-26",
+        "projected_sst": 9.1286,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-27",
+        "projected_sst": 9.4168,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-28",
+        "projected_sst": 9.705,
+        "above_threshold": true
+      }
+    ]
+  },
+  {
+    "site_id": "mahone_bay",
+    "forecast": [
+      {
+        "date": "2026-05-22",
+        "projected_sst": 10.7157,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-23",
+        "projected_sst": 11.2061,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-24",
+        "projected_sst": 11.6964,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-25",
+        "projected_sst": 12.1868,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-26",
+        "projected_sst": 12.6771,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-27",
+        "projected_sst": 13.1675,
+        "above_threshold": true
+      },
+      {
+        "date": "2026-05-28",
+        "projected_sst": 13.6579,
+        "above_threshold": true
+      }
+    ]
+  }
+]
