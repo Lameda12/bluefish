@@ -23,7 +23,7 @@ ERDDAP_BASE   = "https://coastwatch.pfeg.noaa.gov/erddap"
 DATASET_ID    = "NOAA_DHW"
 VAR           = "CRW_SST"
 TIME_SUFFIX   = "T12:00:00Z"
-SEARCH_RADIUS = 0.3   # degrees — wide enough to clear land masks
+SEARCH_RADIUS = 0.6   # degrees — widened to recover Shelburne coastal pixel
 
 
 # ---------------------------------------------------------------------------

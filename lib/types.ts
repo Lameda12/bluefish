@@ -1,4 +1,4 @@
-export type MHWCategory = 0 | 1 | 2 | 3 | 4
+export type MHWCategory = 0 | 1 | 2 | 3 | 4 | null
 
 export interface SpeciesRisk {
   species: 'Atlantic Salmon' | 'Eastern Oyster' | 'Blue Mussel'

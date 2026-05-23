@@ -14,8 +14,8 @@ export default function AlertBanner({ sites }: AlertBannerProps) {
     setVisible(true)
   }, [])
 
-  const criticalCount = sites.filter(s => s.mhw_category >= 3).length
-  const warningCount = sites.filter(s => s.mhw_category >= 1).length
+  const criticalCount = sites.filter(s => s.mhw_category !== null && s.mhw_category >= 3).length
+  const warningCount = sites.filter(s => s.mhw_category !== null && s.mhw_category >= 1).length
 
   if (criticalCount > 0) {
     return (

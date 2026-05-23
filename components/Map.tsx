@@ -24,14 +24,14 @@ interface MapProps {
 }
 
 function categoryColor(cat: MHWCategory): string {
-  if (cat === 0) return '#22c55e'
+  if (cat === null || cat === 0) return '#22c55e'
   if (cat <= 2) return '#eab308'
   if (cat === 3) return '#f97316'
   return '#ef4444'
 }
 
 function categoryLabel(cat: MHWCategory): string {
-  if (cat === 0) return 'No Active MHW'
+  if (cat === null || cat === 0) return 'No Active MHW'
   if (cat === 1) return 'Category I'
   if (cat === 2) return 'Category II'
   if (cat === 3) return 'Category III'
