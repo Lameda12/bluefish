@@ -51,13 +51,19 @@ def main() -> None:
     history    = json.loads(history_path.read_text())
     mhw_status = json.loads(mhw_path.read_text())
 
-    threshold_by_site: dict[str, float] = {
-        rec["site_id"]: rec["threshold"] for rec in mhw_status
-    }
+    threshold_by_site: dict[str, float] = {}
+    for rec in mhw_status:
+        missing = {"site_id", "threshold"} - rec.keys()
+        if missing:
+            raise ValueError(f"mhw_status record missing required fields {missing}: {rec}")
+        threshold_by_site[rec["site_id"]] = rec["threshold"]
 
     # Group and sort history by site
     by_site: dict[str, list] = {}
     for rec in history:
+        missing = {"site_id", "date", "sst"} - rec.keys()
+        if missing:
+            raise ValueError(f"sst_history record missing required fields {missing}: {rec}")
         by_site.setdefault(rec["site_id"], []).append((rec["date"], rec["sst"]))
     for sid in by_site:
         by_site[sid].sort(key=lambda x: x[0])
@@ -73,13 +79,16 @@ def main() -> None:
         threshold = threshold_by_site.get(site_id)
 
         # x = calendar-day offset from first point in window (handles gaps)
-        base = datetime.strptime(window[0][0], "%Y-%m-%d")
-        xs   = [(datetime.strptime(d, "%Y-%m-%d") - base).days for d, _ in window]
+        try:
+            base = datetime.strptime(window[0][0], "%Y-%m-%d")
+            xs   = [(datetime.strptime(d, "%Y-%m-%d") - base).days for d, _ in window]
+            last_date = datetime.strptime(window[-1][0], "%Y-%m-%d")
+        except ValueError as exc:
+            print(f"  {site_id}: malformed date in history, skipping — {exc}")
+            continue
         ys   = [sst for _, sst in window]
 
         slope, intercept = ols(xs, ys)
-
-        last_date = datetime.strptime(window[-1][0], "%Y-%m-%d")
         last_x    = xs[-1]
 
         forecast = []

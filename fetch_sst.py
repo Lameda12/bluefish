@@ -12,6 +12,27 @@ import requests
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+
+def _require_col(cols: list, name: str) -> int:
+    """Return the index of *name* in *cols*, raising a descriptive error when absent."""
+    try:
+        return cols.index(name)
+    except ValueError:
+        raise RuntimeError(
+            f"Expected column '{name}' not found in API response. "
+            f"Available columns: {cols}"
+        )
+
+
+def _extract_table(payload: dict, context: str) -> tuple[list, list]:
+    """Return (columnNames, rows) from an ERDDAP JSON payload, raising on bad structure."""
+    if "table" not in payload:
+        raise RuntimeError(f"ERDDAP response missing 'table' key ({context})")
+    table = payload["table"]
+    if "columnNames" not in table or "rows" not in table:
+        raise RuntimeError(f"ERDDAP table missing 'columnNames' or 'rows' ({context})")
+    return table["columnNames"], table["rows"]
+
 SITES = [
     {"site_id": "shelburne",   "lat":  43.8, "lon": -65.3},
     {"site_id": "digby",       "lat":  44.5, "lon": -65.8},
@@ -33,15 +54,14 @@ SEARCH_RADIUS = 0.6   # degrees — widened to recover Shelburne coastal pixel
 def dataset_last_date() -> datetime:
     """Return the latest timestamp available in NOAA_DHW."""
     url = f"{ERDDAP_BASE}/info/{DATASET_ID}/index.json"
-    resp = requests.get(url, timeout=30)
+    resp = requests.get(url, timeout=30, verify=True)
     resp.raise_for_status()
-    table = resp.json()["table"]
-    cols = table["columnNames"]
-    row_type_idx  = cols.index("Row Type")
-    var_name_idx  = cols.index("Variable Name")
-    attr_name_idx = cols.index("Attribute Name")
-    value_idx     = cols.index("Value")
-    for row in table["rows"]:
+    cols, rows = _extract_table(resp.json(), "dataset info")
+    row_type_idx  = _require_col(cols, "Row Type")
+    var_name_idx  = _require_col(cols, "Variable Name")
+    attr_name_idx = _require_col(cols, "Attribute Name")
+    value_idx     = _require_col(cols, "Value")
+    for row in rows:
         if (row[row_type_idx] == "attribute"
                 and row[var_name_idx] == "time"
                 and row[attr_name_idx] == "actual_range"):
@@ -65,16 +85,15 @@ def nearest_ocean_cell(site: dict, sample: datetime) -> tuple[float, float]:
         f"[({lon - r}):1:({lon + r})]"
     )
     url = f"{ERDDAP_BASE}/griddap/{DATASET_ID}.json?{constraint}"
-    resp = requests.get(url, timeout=60)
+    resp = requests.get(url, timeout=60, verify=True)
     resp.raise_for_status()
-    table = resp.json()["table"]
-    cols    = table["columnNames"]
-    lat_i   = cols.index("latitude")
-    lon_i   = cols.index("longitude")
-    sst_i   = cols.index(VAR)
+    cols, rows = _extract_table(resp.json(), f"nearest-cell scan for {site['site_id']}")
+    lat_i   = _require_col(cols, "latitude")
+    lon_i   = _require_col(cols, "longitude")
+    sst_i   = _require_col(cols, VAR)
 
     best_cell, best_dist = None, float("inf")
-    for row in table["rows"]:
+    for row in rows:
         if row[sst_i] is None:
             continue
         rlat, rlon = row[lat_i], row[lon_i]
@@ -104,15 +123,14 @@ def erddap_timeseries(
         f"[({cell_lon}):1:({cell_lon})]"
     )
     url = f"{ERDDAP_BASE}/griddap/{DATASET_ID}.json?{constraint}"
-    resp = requests.get(url, timeout=60)
+    resp = requests.get(url, timeout=60, verify=True)
     resp.raise_for_status()
-    table = resp.json()["table"]
-    cols    = table["columnNames"]
-    time_i  = cols.index("time")
-    sst_i   = cols.index(VAR)
+    cols, rows = _extract_table(resp.json(), f"timeseries for ({cell_lat}, {cell_lon})")
+    time_i  = _require_col(cols, "time")
+    sst_i   = _require_col(cols, VAR)
 
     records = []
-    for row in table["rows"]:
+    for row in rows:
         sst = row[sst_i]
         if sst is None:
             continue

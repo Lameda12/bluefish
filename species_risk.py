@@ -85,10 +85,12 @@ def main() -> None:
     if not mhw_path.exists():
         raise FileNotFoundError(f"{mhw_path} not found — run mhw_detector.py first")
 
-    mhw_by_site: dict[str, dict] = {
-        rec["site_id"]: rec
-        for rec in json.loads(mhw_path.read_text())
-    }
+    mhw_by_site: dict[str, dict] = {}
+    for rec in json.loads(mhw_path.read_text()):
+        missing = {"site_id", "current_sst", "category", "active"} - rec.keys()
+        if missing:
+            raise ValueError(f"mhw_status record missing required fields {missing}: {rec}")
+        mhw_by_site[rec["site_id"]] = rec
 
     results = []
 
